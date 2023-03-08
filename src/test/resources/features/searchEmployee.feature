@@ -1,21 +1,26 @@
+@testingNow
 Feature: Searching existing Employees
 
-  Scenario: Search for an employee by id
-    Given user is on the Exelenter homepage
+  Background:
     And user logs in with valid admin credentials
     * user navigates to the employee list page
+
+  @smoke
+  Scenario: Search for an employee by id
+#    Given user is on the Exelenter homepage                <== This line is replaced with the Hooks
+#    And user logs in with valid admin credentials          <== This is no longer needed, because of the Background.
     * user enters an existing employee id in the id-search-field
     When user clicks on the search button
     Then the employee information is displayed on the employee list table
 
+  Scenario: Search for an employee by name
+#    Given user is on the Exelenter homepage              <== This line is replaced with the Hooks
+#    And user logs in with valid admin credentials        <== This is no longer needed, because of the Background.
+    * user enters an existing employee name in the employee name-search-field
+    When user clicks on the search button
+    Then the employee information is displayed on the employee list table
 
-    Scenario: Search for an employee by name
-      Given user is on the Exelenter homepage
-      And user logs in with valid admin credentials
-      * user navigates to the employee list page
-      * user enters an existing employee name in the employee name-search-field
-      When user clicks on the search button
-      Then the employee information is displayed on the employee list table
+
 
 #   Tip 1: Ideally, declarative approach (shorter, behavior-driven) is preferred for writing steps in Gherkin
 #          In rare scenarios, we do need imperative style (longer, detailed, and procedural-driven).

@@ -18,7 +18,7 @@ import java.time.Duration;
 public class BaseClass extends CommonMethods {
     public static WebDriver driver;
     public static void setUp() {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+        //System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         //System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
         ConfigsReader.loadProperties(Constants.CONFIGURATION_FILEPATH);
         String headless = ConfigsReader.getProperties("headless");

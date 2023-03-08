@@ -36,7 +36,6 @@ public class SearchEmployeeSteps extends BaseClass {
     @Then("the employee information is displayed on the employee list table")
     public void the_employee_information_is_displayed_on_the_employee_list_table() {
         System.out.println("Employee info is displayed");
-        tearDown();
     }
 
     @Given("user enters an existing employee name in the employee name-search-field")
