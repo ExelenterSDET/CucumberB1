@@ -2,7 +2,7 @@
 Feature:Login tests
 
   Background:
-    Given user is on the exelenter webpage
+#    Given user is on the exelenter webpage   <== No need, @Before Hooks wil take care of this
 
   @smoke
   Scenario: Valid user login test
