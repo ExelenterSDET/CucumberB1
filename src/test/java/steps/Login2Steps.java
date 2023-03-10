@@ -38,4 +38,31 @@ public class Login2Steps extends BaseClass {
         String actualMessage = dashboardPage.welcome.getText();
         Assert.assertEquals("ESS user unable to log in",expectedMessage,actualMessage);
     }
+
+    @When("user enters a valid {string} and a valid {string}")
+    public void user_enters_a_valid_and_a_valid(String username, String password) {
+        loginPage.username.sendKeys(username);
+        loginPage.password.sendKeys(password);
+    }
+    @And("user clicks on the login button")
+    public void user_clicks_on_the_login_button() {
+        loginPage.loginBtn.click();
+    }
+    @Then("user logs in successfully and a {string} is displayed")
+    public void user_logs_in_successfully_and_a_is_displayed(String expectedMessage) {
+        //String actualMessage = dashboardPage.welcome.getText();
+        Assert.assertEquals("User login is NOT successful",expectedMessage, dashboardPage.welcome.getText());
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
