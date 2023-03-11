@@ -1,5 +1,5 @@
 @login2
-Feature: Login Test
+Feature: Permissions Login Test
   This is my description and it is totally optional - where you describe your feature, in more details.
 
 #  This is declarative style
@@ -19,11 +19,6 @@ Feature: Login Test
       | username | password         | message       |
       | Admin    | Exelent2022Sdet! | Welcome Admin |
       | EssUser  | Ess@2023         | Welcome John  |
-    Examples:
-      | username | password         | message       |
-      | Admin    | Exelent2022Sdet! | Welcome Admin |
-      | EssUser  | Ess@2023         | Welcome John  |
 
 
 #  Similar to DataProvider in TestNG
-#  Cucumber DataTable
