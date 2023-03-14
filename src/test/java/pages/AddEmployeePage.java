@@ -10,6 +10,8 @@ import utils.ConfigsReader;
 public class AddEmployeePage extends BaseClass {
     @FindBy(id = "firstName")
     public WebElement firstName;
+    @FindBy(id = "middleName")
+    public WebElement middleName;
     @FindBy(id = "lastName")
     public WebElement lastName;
     @FindBy(id = "employeeId")

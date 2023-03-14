@@ -1,5 +1,5 @@
 @login2
-Feature: Login Test
+Feature: Permissions Login Test
   This is my description and it is totally optional - where you describe your feature, in more details.
 
 #  This is declarative style
@@ -15,10 +15,6 @@ Feature: Login Test
     When user enters a valid "<username>" and a valid "<password>"
     And user clicks on the login button
     Then user logs in successfully and a "<message>" is displayed
-    Examples:
-      | username | password         | message       |
-      | Admin    | Exelent2022Sdet! | Welcome Admin |
-      | EssUser  | Ess@2023         | Welcome John  |
     Examples:
       | username | password         | message       |
       | Admin    | Exelent2022Sdet! | Welcome Admin |

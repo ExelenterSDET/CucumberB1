@@ -3,8 +3,9 @@ package base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import utils.CommonMethods;
@@ -17,6 +18,7 @@ import java.time.Duration;
 
 public class BaseClass extends CommonMethods {
     public static WebDriver driver;
+
     public static void setUp() {
         //System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         //System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
@@ -42,6 +44,16 @@ public class BaseClass extends CommonMethods {
                     driver = new FirefoxDriver(options);
                 } else {
                     driver = new FirefoxDriver();              // <== if headless=false this line will run
+                }
+            }
+            case "edge" -> {
+                WebDriverManager.edgedriver().setup();
+                if (headless.equalsIgnoreCase("true")) {
+                    EdgeOptions options = new EdgeOptions();
+                    options.addArguments("--headless");
+                    driver = new EdgeDriver(options);
+                } else {
+                    driver = new EdgeDriver();           // <== if headless=false this line will run
                 }
             }
             default -> throw new RuntimeException("Browser is not supported");

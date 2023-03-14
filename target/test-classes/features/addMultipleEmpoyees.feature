@@ -1,6 +1,6 @@
 Feature: Adding multiple employees
   To perform Data Driven Testing in Cucumber we use Scenario Online
-
+@addMultiple
   Scenario Outline: Adding multiple employees
     Given user logs in with valid admin credentials
     And user navigates to the add employee page
@@ -15,20 +15,6 @@ Feature: Adding multiple employees
       | David      | A.          | Evans     | David A. Evans        |
       | Gabrielle  | R.          | Thompson  | Gabrielle R. Thompson |
 
-#  Scenario Outline:
-#    When user enters "<firstName>" and "<lastName>"
-#    And user enters employeeID"<employeeId>"
-#    And user click on create login Details "<checkbox>"
-#    And user enters username "<username>" and  password "<password>"
-#    And user clicks save button
-#    Then user verifies employee "<verify full name>" successfully created
-#    Examples:
-#      | firstName | lastName | employeeId | checkbox | username | password       | verify full name |
-#      | Tony      | Rip      | 2001       |          |          |                | Tony Rip         |
-#      | Bob       | Star     |            |          |          |                | Bob Star         |
-#      | Emma      | Maria    | 2002       | YES      | Emmmar   | Exelenter2023! | Emma Maria       |
-
-
 #    Alternatively, you can do this
 #    Then new employee "<First Name> <Middle Name> <Last Name>" is added successfully
 #    Examples:
@@ -41,7 +27,6 @@ Feature: Adding multiple employees
 
 
 #    """
-#    This is multiline String, not a comment.
 #    Expected is local = Full name column, ex:  "Lily M. Graham"
 #    Actual full name is coming from Personal Details Page header.
 #    """

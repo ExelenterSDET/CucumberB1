@@ -5,8 +5,6 @@ import io.cucumber.java.en.*;
 import utils.ConfigsReader;
 
 public class SearchEmployeeSteps extends BaseClass {
-    String expectedEmployeeId = "0909";
-    String expectedEmployeeName = "Zeynep Demir";
     @Given("user is on the Exelenter homepage")
     public void user_is_on_the_exelenter_homepage() {
         setUp();
@@ -22,10 +20,10 @@ public class SearchEmployeeSteps extends BaseClass {
         pimPage.navigateToEmployeeList();
     }
 
-    @Given("user enters an existing employee id in the id-search-field")
-    public void user_enters_an_existing_employee_id_in_the_id_search_field() {
+    @Given("user enters an existing employee id {string} in the id-search-field")
+    public void user_enters_an_existing_employee_id_in_the_id_search_field(String empID) {
         wait(1);
-        employeeListPage.searchEmployeeById(expectedEmployeeId);
+        employeeListPage.searchEmployeeById(empID);
     }
 
     @When("user clicks on the search button")
@@ -38,10 +36,21 @@ public class SearchEmployeeSteps extends BaseClass {
         System.out.println("Employee info is displayed");
     }
 
-    @Given("user enters an existing employee name in the employee name-search-field")
-    public void user_enters_an_existing_employee_name_in_the_employee_name_search_field() {
+    @Given("user enters an existing employee name {string} in the employee name-search-field")
+    public void user_enters_an_existing_employee_name_in_the_employee_name_search_field(String empName) {
         wait(1);
-        employeeListPage.searchEmployeeByName(expectedEmployeeName);
+        employeeListPage.searchEmployeeByName(empName);
     }
 
+    // This is hard-coded version of step definitions(without parameter)
+    @And("user enters an existing employee id in the id-search-field")
+    public void search_employee_by_id() {
+        employeeListPage.searchEmployeeById("0909");
+    }
+
+    // This is hard-coded version of step definitions(without parameter)
+    @And("user enters an existing employee name in the employee name-search-field")
+    public void search_employee_by_name() {
+        employeeListPage.searchEmployeeByName("John Doe");
+    }
 }
