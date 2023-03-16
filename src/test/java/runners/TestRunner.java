@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 //        ,tags = "@smoke"       // run test(s) with provided tag name
 //        ,tags = "@regression or @smoke"       // Run any scenario test that has either regression OR smoke test.  ||
 //        tags = "@regression and @smoke"       // Run any scenario test that has BOTH regression AND smoke test. If one missing it will not run.  &&
-        ,tags = "@addMultiple"
+        ,tags = "@dataTable"
 
 
 )

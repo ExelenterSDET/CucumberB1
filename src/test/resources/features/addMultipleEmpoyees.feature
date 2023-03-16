@@ -15,6 +15,25 @@ Feature: Adding multiple employees
       | David      | A.          | Evans     | David A. Evans        |
       | Gabrielle  | R.          | Thompson  | Gabrielle R. Thompson |
 
+#   2nd way: Adding multiple users using Cucumber DataTable
+  @dataTable
+  Scenario: Adding multiple employees
+    Given user logs in with valid admin credentials
+    And user navigates to the add employee page
+    When user enters employee's full name and clicks on save button
+      | FirstName | MiddleName | LastName |
+      | Ariana    | A.         | Knight   |
+      | Zain      | H.         | Bailey   |
+      | Alexis    | J.         | Cameron  |
+    Then employee is added successfully
+
+#3rd way: from Excel
+
+
+
+
+
+
 #  Scenario Outline:
 #    When user enters "<firstName>" and "<lastName>"
 #    And user enters employeeID"<employeeId>"

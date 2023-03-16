@@ -5,7 +5,6 @@ Feature: Searching existing Employees
     And user logs in with valid admin credentials
     * user navigates to the employee list page
 
-  @temp
   Scenario: Search for an employee by id
     * user enters an existing employee id "0013" in the id-search-field
     When user clicks on the search button
