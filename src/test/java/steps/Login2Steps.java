@@ -3,13 +3,12 @@ package steps;
 import base.BaseClass;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import utils.ConfigsReader;
 
 public class Login2Steps extends BaseClass {
     @When("admin user logs in with valid credentials")
     public void admin_user_logs_in_with_valid_credentials() {
         //1st way
-        loginPage.loginToWebsiteViaConfigs("username", "password");
+        loginPage.loginToWebsiteViaConfigs("username", "Password");
 
         //2nd way
 //        sendText(loginPage.username, ConfigsReader.getProperties("username"));

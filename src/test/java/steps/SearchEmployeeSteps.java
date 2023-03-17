@@ -2,7 +2,6 @@ package steps;
 
 import base.BaseClass;
 import io.cucumber.java.en.*;
-import utils.ConfigsReader;
 
 public class SearchEmployeeSteps extends BaseClass {
     @Given("user is on the Exelenter homepage")
@@ -12,7 +11,7 @@ public class SearchEmployeeSteps extends BaseClass {
 
     @Given("user logs in with valid admin credentials")
     public void user_logs_in_with_valid_admin_credentials() {
-        loginPage.loginToWebsiteViaConfigs("username", "password");
+        loginPage.loginToWebsiteViaConfigs("username", "Password");
     }
 
     @Given("user navigates to the employee list page")

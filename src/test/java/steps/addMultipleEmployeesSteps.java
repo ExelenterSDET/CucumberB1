@@ -35,13 +35,12 @@ public class addMultipleEmployeesSteps extends BaseClass {
 
     @When("user enters employee's full name and clicks on save button")
     public void user_enters_employee_s_full_name_and_clicks_on_save_button(DataTable dataTable) {
-        List<Map<String, String>> mapList = dataTable.asMaps();
-        int mapListSize = mapList.size();
-        System.out.println("mapListSize = " + mapListSize);
+        List<Map<String, String>> mapList = dataTable.entries();
+//        int mapSize = mapList.size();
 //        System.out.println(mapList);
 //        mapList.forEach(System.out::println);
+//        int counter = 0;
         for (Map<String, String> user : mapList) {
-            System.out.println(user.get("FirstName"));
             addEmployeePage.firstName.sendKeys(user.get("FirstName"));   // Ariana
             addEmployeePage.middleName.sendKeys(user.get("MiddleName")); // A.
             addEmployeePage.lastName.sendKeys(user.get("LastName"));     // Knight
@@ -50,11 +49,19 @@ public class addMultipleEmployeesSteps extends BaseClass {
             // Assertion/Validation
             String expectedFullName = user.get("FirstName") + " " + user.get("MiddleName") + " " + user.get("LastName");
             String actualFullName = personalDetailsPage.employeeFullName.getText();
-            Assert.assertEquals("User does not match",expectedFullName, actualFullName);
+            Assert.assertEquals("User does not match", expectedFullName, actualFullName);
 
             // click Add Employee again
             wait(1);
-            pimPage.addEmployee.click();
+//            counter++;
+            // hard code version of it
+//            if (!user.get("Firstname").equals("Alexis")) {
+//                click(pimPage.addEmployee);
+//            }
+            // we can avoid last click by either the counter OR code below.
+            if (!user.get("FirstName").equals(mapList.get(mapList.size()-1).get("FirstName"))) {
+                pimPage.addEmployee.click();
+            }
         }
 
     }

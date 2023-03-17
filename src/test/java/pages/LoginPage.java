@@ -33,6 +33,8 @@ public class LoginPage extends BaseClass {
     }
 
     public void loginToWebsite(String user, String pswd) {
+        username.clear();
+        password.clear();
         sendText(username, user);
         sendText(password, pswd);
         clickButWaitForClickability(loginBtn);
