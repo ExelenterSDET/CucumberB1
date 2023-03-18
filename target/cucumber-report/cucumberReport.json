@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1665915000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user logs in with valid admin credentials",
+            "match": {
+              "location": "steps.SearchEmployeeSteps.user_logs_in_with_valid_admin_credentials()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 814484000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user navigates to the add employee page",
+            "match": {
+              "location": "steps.addMultipleEmployeesSteps.user_navigates_to_the_add_employee_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-18T02:59:07.056Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3671041000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.startBrowser()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Adding multiple employees from Excel",
+        "description": "",
+        "id": "adding-multiple-employees;adding-multiple-employees-from-excel",
+        "after": [
+          {
+            "result": {
+              "duration": 2171101000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5292249000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user enters employee data from the \"Employee\" sheet",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Employee\"",
+                  "offset": 35
+                }
+              ],
+              "location": "steps.addMultipleEmployeesSteps.user_enters_employee_data_from_the_sheet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "new employee is added successfully using Excel import",
+            "match": {
+              "location": "steps.addMultipleEmployeesSteps.new_employee_is_added_successfully_using_excel_import()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@excel"
+          }
+        ]
+      }
+    ],
+    "name": "Adding multiple employees",
+    "description": "  To perform Data Driven Testing in Cucumber we use Scenario Online",
+    "id": "adding-multiple-employees",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/addMultipleEmpoyees.feature",
+    "tags": []
+  }
+]
