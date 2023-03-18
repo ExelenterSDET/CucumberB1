@@ -1,6 +1,7 @@
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/SearchEmployeeSteps.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/utils/ConfigsReader.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/runners/TestRunner.java
+/Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/runners/RegressionRunner.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/pages/DashboardPage.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/utils/CommonMethods.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/pages/PIMPage.java
@@ -8,10 +9,14 @@
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/Login2Steps.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/Hooks.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/addMultipleEmployeesSteps.java
+/Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/runners/SmokeRunner.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/NegativeLoginTestSteps.java
+/Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/runners/FailRunner.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/base/PageInitializer.java
+/Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/steps/DashboardSteps.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/pages/AddEmployeePage.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/base/BaseClass.java
+/Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/runners/Listener.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/pages/LoginPage.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/utils/ExcelUtility.java
 /Users/shahnoza/IdeaProjects/CucumberB1/src/test/java/utils/Constants.java

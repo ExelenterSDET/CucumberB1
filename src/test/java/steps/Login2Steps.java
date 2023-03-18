@@ -8,7 +8,7 @@ public class Login2Steps extends BaseClass {
     @When("admin user logs in with valid credentials")
     public void admin_user_logs_in_with_valid_credentials() {
         //1st way
-        loginPage.loginToWebsiteViaConfigs("username", "Password");
+        loginPage.loginToWebsiteViaConfigs("username", "password");
 
         //2nd way
 //        sendText(loginPage.username, ConfigsReader.getProperties("username"));
@@ -22,6 +22,7 @@ public class Login2Steps extends BaseClass {
     }
     @Then("admin user logs in successfully")
     public void admin_user_logs_in_successfully() {
+//        Assert.fail(); // Failing on purpose for failed.txt generating. Fix later.
         String expectedMessage = "Welcome Admin";
         String actualMessage = dashboardPage.welcome.getText();
         Assert.assertEquals("Admin user unable to log in",expectedMessage,actualMessage);
@@ -33,6 +34,7 @@ public class Login2Steps extends BaseClass {
     }
     @Then("ess user logs in successfully")
     public void ess_user_logs_in_successfully() {
+        //Assert.fail(); // Failing this for rerun fail txt, change back when you are done.
         String expectedMessage = "Welcome John";
         String actualMessage = dashboardPage.welcome.getText();
         Assert.assertEquals("ESS user unable to log in",expectedMessage,actualMessage);

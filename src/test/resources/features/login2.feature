@@ -1,12 +1,14 @@
-@login2
+@login2 @regression
 Feature: Permissions Login Test
   This is my description and it is totally optional - where you describe your feature, in more details.
 
 #  This is declarative style
+  @smoke
   Scenario: valid admin login
     When admin user logs in with valid credentials
     Then admin user logs in successfully
 
+  @smoke
   Scenario: valid ess login
     When ess user logs in with valid credentials
     Then ess user logs in successfully
