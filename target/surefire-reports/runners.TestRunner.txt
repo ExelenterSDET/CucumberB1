@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.904 s - in runners.TestRunner
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 34.787 s <<< FAILURE! - in runners.TestRunner
+Login tests.Valid user login test  Time elapsed: 5.09 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.fail(Assert.java:96)
+	at steps.LoginSteps.welcome_message_is_displayed_in_dashboard_page(LoginSteps.java:18)
+	at ✽.welcome message is displayed in dashboard page(file:///Users/shahnoza/IdeaProjects/CucumberB1/src/test/resources/features/login.feature:7)
+
+Permissions Login Test.valid ess login  Time elapsed: 4.112 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.fail(Assert.java:96)
+	at steps.Login2Steps.ess_user_logs_in_successfully(Login2Steps.java:37)
+	at ✽.ess user logs in successfully(file:///Users/shahnoza/IdeaProjects/CucumberB1/src/test/resources/features/login2.feature:14)
+

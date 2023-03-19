@@ -15,6 +15,7 @@ public class LoginSteps extends BaseClass {
 
     @Then("welcome message is displayed in dashboard page")
     public void welcome_message_is_displayed_in_dashboard_page() {
+        //Assert.fail(); // failing on purpose for testing, fix it when finished testing.
         String expectedWelcomeMsg = "Welcome Admin";
         String actualWelcomeMsg = dashboardPage.welcome.getText();
         Assert.assertEquals("Admin login NOT successful",expectedWelcomeMsg, actualWelcomeMsg);

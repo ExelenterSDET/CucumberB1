@@ -1,4 +1,4 @@
-@login2 @regression
+@login @regression
 Feature: Permissions Login Test
   This is my description and it is totally optional - where you describe your feature, in more details.
 

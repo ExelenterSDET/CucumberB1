@@ -12,7 +12,7 @@ Feature: Searching existing Employees
     When user clicks on the search button
     Then the employee information is displayed on the employee list table
 
-  @regression
+  @regression @searchEmployee
   Scenario: Search for an employee by name
 #    Given user is on the Exelenter homepage              <== This line is replaced with the Hooks
 #    And user logs in with valid admin credentials        <== This is no longer needed, because of the Background.

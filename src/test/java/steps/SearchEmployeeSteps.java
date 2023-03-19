@@ -2,6 +2,7 @@ package steps;
 
 import base.BaseClass;
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 
 public class SearchEmployeeSteps extends BaseClass {
     @Given("user is on the Exelenter homepage")
