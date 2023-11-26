@@ -27,7 +27,7 @@ public class BaseClass extends CommonMethods {
 
         switch (ConfigsReader.getProperties("browser").toLowerCase()) {
             case "chrome" -> {
-                WebDriverManager.chromedriver().setup();  // <== This line will replaces local driver.
+//                WebDriverManager.chromedriver().setup();  // <== This line will replaces local driver.
                 if (headless.equalsIgnoreCase("true")) {
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless", "--log-level=3");          // <== Run in headless mode
